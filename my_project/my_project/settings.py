@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-1$t!=^+&sg!=3ckv^+i!!7sf9w$=47v7(-h63!-+2+wzv3h1@7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djfvjf.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'djfvjf.pythonanywhere.com'
+]
 
 
 # Application definition
@@ -38,18 +40,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "corsheaders",
     'tables'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.common.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     'http://djfvjf.pythonanywhere.com'
+# ]
 
 ROOT_URLCONF = 'my_project.urls'
 
