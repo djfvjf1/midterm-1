@@ -56,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # CORS_ALLOWED_ORIGINS = [
 #     'http://djfvjf.pythonanywhere.com'
